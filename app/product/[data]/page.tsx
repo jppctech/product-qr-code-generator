@@ -31,11 +31,20 @@ interface ProductDetails {
 export default async function ProductPage({ params }: { params: any }) {
   const productDetails: ProductDetails = JSON.parse(decodeURIComponent(params.data));
 
-  // Helper function to format camelCase to "Title Case" with spaces
+  // Helper function to format keys to the desired display format
   const formatKey = (key: string) => {
-    return key
-      .replace(/([a-z])([A-Z])/g, "$1 $2") // Insert space before uppercase letters
-      .replace(/(^|\s)(\w)/g, (match) => match.toUpperCase()); // Capitalize the first letter of each word
+    switch (key) {
+      case "price":
+        return "MRP";
+      case "weight":
+        return "Net Weight";
+      case "lotNo":
+        return "LOT No";
+      default:
+        return key
+          .replace(/([a-z])([A-Z])/g, "$1 $2") // Insert space before uppercase letters
+          .replace(/(^|\s)(\w)/g, (match) => match.toUpperCase()); // Capitalize the first letter of each word
+    }
   };
 
   return (
@@ -59,7 +68,11 @@ export default async function ProductPage({ params }: { params: any }) {
                 <TableRow key={key}>
                   <TableCell className="font-medium">{formatKey(key)}</TableCell>
                   <TableCell>
-                    {key === "bestBefore" ? `${value} Months` : value}
+                    {key === "bestBefore"
+                      ? `${value} months`
+                      : key === "price"
+                      ? `₹${value}`
+                      : value}
                   </TableCell>
                 </TableRow>
               ))}
