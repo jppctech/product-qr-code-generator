@@ -1,4 +1,4 @@
-import ClientQRCodeGenerator from '../components/ClientsQRCodesGenerator'
+import ClientQRCodeGenerator from '../components/ClientQRCodeGenerator'
 
 export default function Home() {
   return (

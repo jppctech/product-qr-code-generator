@@ -12,6 +12,7 @@ import { generateQRCode } from '../utils/generateQRCode'
 import { generateUniqueId } from '../utils/generateId'
 
 interface ProductDetails {
+  productId: string
   productName: string
   weight: string
   price: string
@@ -25,6 +26,7 @@ interface ProductDetails {
 
 export default function QRCodeGenerator() {
   const [productDetails, setProductDetails] = useState<ProductDetails>({
+    productId: '',
     productName: '',
     weight: '',
     price: '',
@@ -47,7 +49,7 @@ export default function QRCodeGenerator() {
     const newQRCodes = []
     for (let i = 0; i < count; i++) {
       const productId = generateUniqueId()
-      const data = JSON.stringify({ productId, ...productDetails })
+      const data = { ...productDetails, productId }
       const qrCode = await generateQRCode(data)
       newQRCodes.push({ id: productId, dataUrl: qrCode })
     }
