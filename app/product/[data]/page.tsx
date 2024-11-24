@@ -14,7 +14,7 @@ interface ProductDetails {
   category?: string
 }
 
-export default async function ProductPage({ params }: { params: { data: string } }) {
+export default async function ProductPage({ params }: { params: any }) {
   const productDetails: ProductDetails = JSON.parse(decodeURIComponent(params.data))
 
   return (
