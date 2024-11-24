@@ -12,6 +12,8 @@ interface ProductDetails {
   email: string
   companyName: string
   category?: string
+  lotNo: string
+  bestBefore: string
 }
 
 export default async function ProductPage({ params }: { params: any }) {

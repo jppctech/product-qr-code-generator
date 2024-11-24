@@ -12,6 +12,8 @@ interface ProductFormProps {
     email: string
     companyName: string
     category?: string
+    lotNo: string
+    bestBefore: string
   }
   handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
@@ -56,6 +58,27 @@ export default function ProductForm({ productDetails, handleInputChange }: Produ
           name="manufacturingDate"
           type="date"
           value={productDetails.manufacturingDate}
+          onChange={handleInputChange}
+          required
+        />
+      </div>
+      <div className="grid w-full items-center gap-1.5">
+        <Label htmlFor="lotNo">Lot No</Label>
+        <Input
+          id="lotNo"
+          name="lotNo"
+          value={productDetails.lotNo}
+          onChange={handleInputChange}
+          required
+        />
+      </div>
+      <div className="grid w-full items-center gap-1.5">
+        <Label htmlFor="bestBefore">Best Before</Label>
+        <Input
+          id="bestBefore"
+          name="bestBefore"
+          type="date"
+          value={productDetails.bestBefore}
           onChange={handleInputChange}
           required
         />
