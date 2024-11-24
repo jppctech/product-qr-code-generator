@@ -73,11 +73,11 @@ export default function ProductForm({ productDetails, handleInputChange }: Produ
         />
       </div>
       <div className="grid w-full items-center gap-1.5">
-        <Label htmlFor="bestBefore">Best Before</Label>
+        <Label htmlFor="bestBefore">Best Before (in months)</Label>
         <Input
           id="bestBefore"
           name="bestBefore"
-          type="date"
+          type="text"
           value={productDetails.bestBefore}
           onChange={handleInputChange}
           required
