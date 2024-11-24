@@ -31,12 +31,11 @@ interface ProductDetails {
 export default async function ProductPage({ params }: { params: any }) {
   const productDetails: ProductDetails = JSON.parse(decodeURIComponent(params.data));
 
-  // Helper function to format camelCase to readable text
+  // Helper function to format camelCase to "Title Case" with spaces
   const formatKey = (key: string) => {
     return key
       .replace(/([a-z])([A-Z])/g, "$1 $2") // Insert space before uppercase letters
-      .replace(/([A-Z])/g, (match) => match.toLowerCase()) // Convert to lowercase
-      .replace(/^./, (str) => str.toUpperCase()); // Capitalize first letter
+      .replace(/(^|\s)(\w)/g, (match) => match.toUpperCase()); // Capitalize the first letter of each word
   };
 
   return (
