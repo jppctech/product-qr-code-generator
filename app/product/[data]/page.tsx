@@ -59,7 +59,7 @@ export default async function ProductPage({ params }: { params: any }) {
                 <TableRow key={key}>
                   <TableCell className="font-medium">{formatKey(key)}</TableCell>
                   <TableCell>
-                    {key === "bestBefore" ? `${value} months` : value}
+                    {key === "bestBefore" ? `${value} Months` : value}
                   </TableCell>
                 </TableRow>
               ))}
