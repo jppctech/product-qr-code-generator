@@ -10,3 +10,4 @@ export async function generateQRCode(data: object): Promise<string> {
     return ''
   }
 }
+
