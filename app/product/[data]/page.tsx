@@ -45,4 +45,3 @@ export default function ProductPage({ params }: { params: { data: string } }) {
     </div>
   )
 }
-
