@@ -37,7 +37,7 @@ export default async function ProductPage({ params }: { params: any }) {
               {Object.entries(productDetails).map(([key, value]) => (
                 <TableRow key={key}>
                   <TableCell className="font-medium">{key.charAt(0).toUpperCase() + key.slice(1)}</TableCell>
-                  <TableCell>{value} {`${key.charAt(0).toUpperCase() + key.slice(1) == "bestBefore" && "months"}`}</TableCell>
+                  <TableCell>{value} {`${key.charAt(0).toUpperCase() + key.slice(1) == "BestBefore" && "months"}`}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
