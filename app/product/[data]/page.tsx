@@ -12,6 +12,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import Image from "next/image";
 
 interface ProductDetails {
   productId: string;
@@ -58,6 +59,26 @@ export default async function ProductPage({ params }: { params: any }) {
     <div className="container mx-auto p-4">
       <Card className="w-full max-w-3xl mx-auto">
         <CardHeader>
+          <div className="flex justify-between w-full">
+            <Image
+              src={"/logo1.png"}
+              height={100}
+              width={100}
+              alt="logo"
+            />
+            <Image
+              src={"/logo2.png"}
+              height={100}
+              width={100}
+              alt="logo"
+            />
+            <Image
+              src={"/logo3.png"}
+              height={100}
+              width={100}
+              alt="logo"
+            />
+          </div>
           <CardTitle className="text-2xl font-bold text-center">
             {productDetails.productName}
           </CardTitle>
