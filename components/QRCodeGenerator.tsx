@@ -24,6 +24,7 @@ interface ProductDetails {
   category?: string
   lotNo: string
   bestBefore: string
+  market: string
 }
 
 export default function QRCodeGenerator() {
@@ -37,9 +38,10 @@ export default function QRCodeGenerator() {
     address: '',
     email: '',
     companyName: '',
-    category: '',
+    category: 'India',
     lotNo: '',
     bestBefore: '',
+    market: ''
   })
   const [qrCodes, setQRCodes] = useState<Array<{ id: string; dataUrl: string }>>([])
   const [multipleCount, setMultipleCount] = useState<number>(2)

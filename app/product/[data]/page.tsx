@@ -26,6 +26,7 @@ interface ProductDetails {
   category?: string;
   lotNo: string;
   bestBefore: string;
+  market: string
 }
 
 export default async function ProductPage({ params }: { params: any }) {
@@ -40,6 +41,12 @@ export default async function ProductPage({ params }: { params: any }) {
         return "Net Weight";
       case "lotNo":
         return "LOT No";
+      case "companyName":
+        return "Commodity";
+      case "contactNumber":
+        return "Customer Caaare No.";
+      case "market":
+        return "Packed & Maketed by.";
       default:
         return key
           .replace(/([a-z])([A-Z])/g, "$1 $2") // Insert space before uppercase letters

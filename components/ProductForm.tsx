@@ -14,6 +14,7 @@ interface ProductFormProps {
     category?: string
     lotNo: string
     bestBefore: string
+    market: string
   }
   handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
@@ -32,7 +33,7 @@ export default function ProductForm({ productDetails, handleInputChange }: Produ
         />
       </div>
       <div className="grid w-full items-center gap-1.5">
-        <Label htmlFor="weight">Weight</Label>
+        <Label htmlFor="weight">NET Weight</Label>
         <Input
           id="weight"
           name="weight"
@@ -42,7 +43,7 @@ export default function ProductForm({ productDetails, handleInputChange }: Produ
         />
       </div>
       <div className="grid w-full items-center gap-1.5">
-        <Label htmlFor="price">Price</Label>
+        <Label htmlFor="price">MRP.</Label>
         <Input
           id="price"
           name="price"
@@ -84,7 +85,7 @@ export default function ProductForm({ productDetails, handleInputChange }: Produ
         />
       </div>
       <div className="grid w-full items-center gap-1.5">
-        <Label htmlFor="contactNumber">Contact Number</Label>
+        <Label htmlFor="contactNumber">Customer Care No.</Label>
         <Input
           id="contactNumber"
           name="contactNumber"
@@ -115,7 +116,18 @@ export default function ProductForm({ productDetails, handleInputChange }: Produ
         />
       </div>
       <div className="grid w-full items-center gap-1.5">
-        <Label htmlFor="companyName">Company Name</Label>
+        <Label htmlFor="market">Email</Label>
+        <Input
+          id="market"
+          name="market"
+          type="text"
+          value={productDetails.market}
+          onChange={handleInputChange}
+          required
+        />
+      </div>
+      <div className="grid w-full items-center gap-1.5">
+        <Label htmlFor="companyName">Commodity</Label>
         <Input
           id="companyName"
           name="companyName"
@@ -125,7 +137,7 @@ export default function ProductForm({ productDetails, handleInputChange }: Produ
         />
       </div>
       <div className="grid w-full items-center gap-1.5">
-        <Label htmlFor="category">Category (Optional)</Label>
+        <Label htmlFor="category">Country of origin</Label>
         <Input
           id="category"
           name="category"
