@@ -21,7 +21,7 @@ interface ProductFormProps {
 
 export default function ProductForm({ productDetails, handleInputChange }: ProductFormProps) {
   return (
-    <form className="space-y-4">
+    <form className="space-y-4 py-4">
       <div className="grid w-full items-center gap-1.5">
         <Label htmlFor="productName">Product Name</Label>
         <Input
@@ -116,7 +116,7 @@ export default function ProductForm({ productDetails, handleInputChange }: Produ
         />
       </div>
       <div className="grid w-full items-center gap-1.5">
-        <Label htmlFor="market">Email</Label>
+        <Label htmlFor="market">Packed & Marketed by</Label>
         <Input
           id="market"
           name="market"

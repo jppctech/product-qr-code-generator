@@ -45,7 +45,7 @@ export default async function ProductPage({ params }: { params: any }) {
       case "companyName":
         return "Commodity";
       case "contactNumber":
-        return "Customer Caaare No.";
+        return "Customer Care No.";
       case "market":
         return "Packed & Maketed by.";
       default:
@@ -65,18 +65,21 @@ export default async function ProductPage({ params }: { params: any }) {
               height={100}
               width={100}
               alt="logo"
+              className=" object-contain"
             />
             <Image
               src={"/logo2.png"}
               height={100}
               width={100}
               alt="logo"
+              className=" object-contain"
             />
             <Image
               src={"/logo3.png"}
               height={100}
               width={100}
               alt="logo"
+              className=" object-contain"
             />
           </div>
           <CardTitle className="text-2xl font-bold text-center">
