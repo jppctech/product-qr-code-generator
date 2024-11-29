@@ -11,7 +11,7 @@ interface ProductFormProps {
     address: string
     email: string
     companyName: string
-    category?: string
+    countryOfOrigin?: string
     lotNo: string
     bestBefore: string
     market: string
@@ -137,11 +137,11 @@ export default function ProductForm({ productDetails, handleInputChange }: Produ
         />
       </div>
       <div className="grid w-full items-center gap-1.5">
-        <Label htmlFor="category">Country of origin</Label>
+        <Label htmlFor="countryOfOrigin">Country of origin</Label>
         <Input
-          id="category"
-          name="category"
-          value={productDetails.category}
+          id="countryOfOrigin"
+          name="countryOfOrigin"
+          value={productDetails.countryOfOrigin}
           onChange={handleInputChange}
         />
       </div>

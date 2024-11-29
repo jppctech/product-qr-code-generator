@@ -47,13 +47,17 @@ export default async function ProductPage({ params }: { params: any }) {
       case "contactNumber":
         return "Customer Care No.";
       case "market":
-        return "Packed & Maketed by.";
+      return "Packed & Maketed by.";
+        case "countryOfOrigin":
+        return "Country Of Origin.";
       default:
         return key
           .replace(/([a-z])([A-Z])/g, "$1 $2") // Insert space before uppercase letters
           .replace(/(^|\s)(\w)/g, (match) => match.toUpperCase()); // Capitalize the first letter of each word
     }
   };
+
+  // countryOfOrigin
 
   return (
     <div className="container mx-auto p-4">
