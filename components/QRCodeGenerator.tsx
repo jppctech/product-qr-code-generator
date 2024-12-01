@@ -21,7 +21,6 @@ interface ProductDetails {
   address: string
   email: string
   companyName: string
-  category?: string
   lotNo: string
   bestBefore: string
   market: string
@@ -38,7 +37,6 @@ export default function QRCodeGenerator() {
     address: '',
     email: '',
     companyName: '',
-    category: 'India',
     lotNo: '',
     bestBefore: '',
     market: ''
