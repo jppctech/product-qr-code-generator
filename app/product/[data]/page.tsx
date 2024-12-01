@@ -105,7 +105,7 @@ export default async function ProductPage({ params }: { params: any }) {
                     {key === "bestBefore"
                       ? `${value} Months`
                       : key === "price"
-                      ? `₹${value}`
+                      ? `₹${" "}${value}`
                       : value}
                   </TableCell>
                 </TableRow>
